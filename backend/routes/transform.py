@@ -1,6 +1,4 @@
-"""PHOTON — Geometric Transform Routes (C3)
-All operations use OpenCV affine matrices as required by spec.
-Supports: flip, rotate (90/180/free), resize, crop, translate."""
+"""PHOTON — Transform Routes"""
 
 from flask import Blueprint, request, jsonify
 import cv2

@@ -1,5 +1,4 @@
-"""PHOTON — Histogram Routes (C9)
-Compute histogram data, render matplotlib PNG, before/after comparison."""
+"""PHOTON — Histogram Routes"""
 
 from flask import Blueprint, request, jsonify
 import cv2

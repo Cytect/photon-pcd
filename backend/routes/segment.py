@@ -1,5 +1,4 @@
-"""PHOTON — Segmentation Routes (C8)
-Threshold-based, edge-based, and region-based (K-means) segmentation."""
+"""PHOTON — Segment Routes"""
 
 from flask import Blueprint, request, jsonify
 import cv2

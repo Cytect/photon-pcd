@@ -1,6 +1,4 @@
-/* PHOTON — Edge Detection & Binary Service (C7)
- * All algorithms implemented in JS. Python backend called as compliance fallback.
- * Includes: Threshold, Canny, Sobel, Prewitt, Robert, Laplacian, LoG, Erode, Dilate. */
+/* PHOTON — Edge Service */
 
 import { getLoadedImage, setLoadedImage, getCanvas } from './ImageEngine.js';
 import { getState, setState } from '../utils/state.js';

@@ -138,7 +138,7 @@ const views = {
         <button class="btn-sm" id="btn-bc-reset" style="flex:1">Reset</button>
         <button class="btn-sm" id="btn-hist-eq" style="flex:1;background:var(--accent-subtle);color:var(--accent)">Histogram Equalization</button>
       </div>
-      <button class="btn-sm" id="btn-bc-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">✓ Apply Changes</button>`
+      <button class="btn-sm" id="btn-bc-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">Apply Changes</button>`
     ),
 
   crop: () => section('Crop', `
@@ -228,7 +228,7 @@ const views = {
       <div class="btn-row" style="margin-top:var(--sp-2)">
         <button class="btn-sm" id="btn-sharp-reset" style="flex:1">Reset</button>
       </div>
-      <button class="btn-sm" id="btn-sharp-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">✓ Apply Changes</button>`
+      <button class="btn-sm" id="btn-sharp-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">Apply Changes</button>`
     ),
 
   blur: () =>
@@ -244,7 +244,7 @@ const views = {
       <div class="btn-row" style="margin-top:var(--sp-2)">
         <button class="btn-sm" id="btn-blur-reset" style="flex:1">Reset</button>
       </div>
-      <button class="btn-sm" id="btn-blur-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">✓ Apply Changes</button>
+      <button class="btn-sm" id="btn-blur-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">Apply Changes</button>
     `) +
     section('Noise', `
       <p style="font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--sp-2)">Add noise to test filter effectiveness.</p>
@@ -258,7 +258,7 @@ const views = {
       <div class="btn-row" style="margin-top:var(--sp-2)">
         <button class="btn-sm" id="btn-noise-reset" style="flex:1">Reset</button>
       </div>
-      <button class="btn-sm" id="btn-noise-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">✓ Apply Changes</button>
+      <button class="btn-sm" id="btn-noise-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">Apply Changes</button>
     `, true),
 
   color: () =>
@@ -280,7 +280,7 @@ const views = {
       <div class="btn-row" style="margin-top:var(--sp-2)">
         <button class="btn-sm" id="btn-color-reset" style="flex:1">Reset</button>
       </div>
-      <button class="btn-sm" id="btn-color-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">✓ Apply Changes</button>`
+      <button class="btn-sm" id="btn-color-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">Apply Changes</button>`
     ),
 
   threshold: () =>
@@ -296,7 +296,7 @@ const views = {
       <div class="btn-row" style="margin-top:var(--sp-2)">
         <button class="btn-sm" id="btn-thresh-reset" style="flex:1">Reset</button>
       </div>
-      <button class="btn-sm" id="btn-thresh-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">✓ Apply Changes</button>`
+      <button class="btn-sm" id="btn-thresh-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">Apply Changes</button>`
     ) +
     section('Morphology', `
       ${slider('Kernel', 'morph-k', 0, 15, 0)}
@@ -313,7 +313,7 @@ const views = {
       <div class="btn-row" style="margin-top:var(--sp-2)">
         <button class="btn-sm" id="btn-morph-reset" style="flex:1">Reset</button>
       </div>
-      <button class="btn-sm" id="btn-morph-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">✓ Apply Changes</button>
+      <button class="btn-sm" id="btn-morph-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">Apply Changes</button>
     `, true),
 
   edge: () =>
@@ -333,7 +333,7 @@ const views = {
       <div class="btn-row" style="margin-top:var(--sp-2)">
         <button class="btn-sm" id="btn-edge-reset" style="flex:1">Reset</button>
       </div>
-      <button class="btn-sm" id="btn-edge-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">✓ Apply Changes</button>
+      <button class="btn-sm" id="btn-edge-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">Apply Changes</button>
     `),
 
   segment: () =>
@@ -350,7 +350,7 @@ const views = {
       <div class="btn-row" style="margin-top:var(--sp-2)">
         <button class="btn-sm" id="btn-seg-reset" style="flex:1">Reset</button>
       </div>
-      <button class="btn-sm" id="btn-seg-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">✓ Apply Changes</button>
+      <button class="btn-sm" id="btn-seg-apply" style="width:100%;margin-top:var(--sp-2);background:var(--accent);color:#fff;font-weight:600">Apply Changes</button>
     `),
 
   ai: () => section('AI Recognition (CNN)', `
@@ -366,17 +366,14 @@ const views = {
       <option value="accessories">Accessories</option>
     </select>
     ${slider('Min. Confidence', 'ai-conf', 10, 90, 40, '%')}
-    <p style="font-size:10px;color:var(--text-muted);margin:-4px 0 8px;line-height:1.3">
-      Minimum score to show a detection.<br>Lower = more results (may include false positives).<br>Higher = fewer but more accurate.
-    </p>
     <button class="btn-sm" id="btn-ai-run" style="width:100%;background:var(--accent-subtle);color:var(--accent);border-color:var(--accent-muted)">
-      ✨ Run Recognition
+      Run Recognition
     </button>
     <button class="btn-sm" id="btn-ai-clear" style="width:100%;margin-top:var(--sp-1);display:none">
       Clear Results
     </button>
     <div id="ai-results" style="margin-top:var(--sp-2);max-height:200px;overflow-y:auto;font-size:var(--text-xs);color:var(--text-secondary)"></div>
-    <p style="font-size:10px;color:var(--text-muted);margin-top:var(--sp-2)">YOLOv4-tiny · CNN · COCO dataset</p>
+    <p style="font-size:10px;color:var(--text-muted);margin-top:var(--sp-2)">YOLOv4-tiny / COCO</p>
   `),
 };
 
@@ -1902,7 +1899,7 @@ function wireSliders(root) {
       }
 
       // Restore button
-      btnAI.innerHTML = '✨ Run Recognition';
+      btnAI.innerHTML = 'Run Recognition';
       btnAI.disabled = false;
       btnAI.style.opacity = '1';
 

@@ -1,5 +1,4 @@
-/* PHOTON — Project Service (C12)
- * CRUD operations for projects via /api/projects. */
+/* PHOTON — Project Service */
 
 import { API_BASE } from '../utils/api.js';
 

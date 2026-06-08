@@ -1,7 +1,4 @@
-/* PHOTON — Local Project Store (IndexedDB)
- * Stores projects locally in the browser.
- * Each project holds: metadata + full canvas PNG + small thumbnail JPEG.
- * Zero backend dependency — works fully offline. */
+/* PHOTON — Local Project Store */
 
 const DB_NAME = 'photon_local_db';
 const DB_VERSION = 1;

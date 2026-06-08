@@ -1,6 +1,4 @@
-/* PHOTON — Histogram Panel (C9)
- * JS-first histogram rendering on canvas. Falls back to Python matplotlib if available.
- * Computes R/G/B/Luminance histograms from loadedImageElement directly. */
+/* PHOTON — Histogram Panel */
 
 import { subscribe, getState } from '../utils/state.js';
 import { apiPost } from '../utils/api.js';

@@ -1,6 +1,4 @@
-/* PHOTON — Interaction Layer (Canva-style image select/move/resize)
- * Layering: canvas bg → image (overflow visible) → canvas border outline → selection handles
- */
+/* PHOTON — Interaction Layer */
 import { setState, getState, subscribe } from '../utils/state.js';
 import { getCanvas, getCtx, getLoadedImage, setLoadedImage } from '../services/ImageEngine.js';
 import { apiPost } from '../utils/api.js';

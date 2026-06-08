@@ -1,17 +1,17 @@
-# 🚀 Photon — Setup Guide
+# Photon -- Setup Guide
 
 > Image Processing Suite built with Vite + Flask + OpenCV
 
-## ⚡ Quick Start (Copy & Paste)
+## Quick Start (Copy and Paste)
 
-**Terminal 1 — Backend:**
+**Terminal 1 -- Backend:**
 ```cmd
 cd backend
 pip install -r requirements.txt
 python app.py
 ```
 
-**Terminal 2 — Frontend (new window):**
+**Terminal 2 -- Frontend (new window):**
 ```cmd
 npm install
 npm run dev
@@ -30,11 +30,11 @@ Install these before starting:
 | **Node.js** | 18+ | https://nodejs.org |
 | **Python** | 3.10+ | https://www.python.org/downloads |
 
-> ⚠️ During Python install, **check "Add Python to PATH"**.
+> During Python install, check "Add Python to PATH".
 
 ---
 
-## Step 1 — Extract the Project
+## Step 1 -- Extract the Project
 
 Unzip `Photon Project (PCD).zip` to any folder, for example:
 
@@ -44,22 +44,22 @@ D:\Photon Project (PCD)\
 
 ---
 
-## Step 2 — Install Python Dependencies
+## Step 2 -- Install Python Dependencies
 
-Open **Command Prompt** and run:
+Open Command Prompt and run:
 
 ```cmd
 cd "D:\Photon Project (PCD)\backend"
 pip install -r requirements.txt
 ```
 
-This installs: Flask, OpenCV, NumPy, Matplotlib, PyMySQL, Pillow.
+This installs Flask, OpenCV, NumPy, Matplotlib, PyMySQL, Pillow.
 
-> ⏳ First time may take 2–5 minutes (OpenCV is large).
+> First time may take 2-5 minutes (OpenCV is large).
 
 ---
 
-## Step 3 — Start the Backend Server
+## Step 3 -- Start the Backend Server
 
 In the same terminal:
 
@@ -75,24 +75,24 @@ You should see:
   [*] Health check: http://localhost:5000/api/health
 ```
 
-**Leave this terminal open!** Don't close it.
+Leave this terminal open.
 
 ---
 
-## Step 4 — Install Frontend Dependencies
+## Step 4 -- Install Frontend Dependencies
 
-Open a **NEW** Command Prompt window and run:
+Open a new Command Prompt window and run:
 
 ```cmd
 cd "D:\Photon Project (PCD)"
 npm install
 ```
 
-> ⏳ First time may take 1–3 minutes.
+> First time may take 1-3 minutes.
 
 ---
 
-## Step 5 — Start the Frontend Server
+## Step 5 -- Start the Frontend Server
 
 In the same terminal:
 
@@ -105,27 +105,27 @@ You should see:
 ```
   VITE v6.x.x  ready in XXX ms
 
-  ➜  Local:   http://localhost:3000/
+  Local:   http://localhost:3000/
 ```
 
 ---
 
-## Step 6 — Open the App
+## Step 6 -- Open the App
 
 Open your browser and go to:
 
-### 👉 http://localhost:3000
+**http://localhost:3000**
 
-You should see the Photon dashboard!
+You should see the Photon dashboard.
 
 ---
 
 ## Quick Start Checklist
 
 ```
-✅ Terminal 1: python app.py     → port 5000
-✅ Terminal 2: npm run dev       → port 3000
-✅ Browser: http://localhost:3000
+Terminal 1: python app.py     (port 5000)
+Terminal 2: npm run dev       (port 3000)
+Browser: http://localhost:3000
 ```
 
 ---
@@ -143,26 +143,26 @@ You should see the Photon dashboard!
 ## Troubleshooting
 
 ### "pip is not recognized"
-→ Reinstall Python and check **"Add Python to PATH"** during installation.
+Reinstall Python and check "Add Python to PATH" during installation.
 
 ### "npm is not recognized"
-→ Reinstall Node.js and restart your terminal.
+Reinstall Node.js and restart your terminal.
 
 ### CORS error in browser console
-→ Make sure the backend is running on port 5000 and frontend on port 3000.
+Make sure the backend is running on port 5000 and frontend on port 3000.
 
 ### AI Recognition says "YOLO weights not found"
-→ The `backend/models/yolov3-tiny.weights` file (34MB) is needed. Download it:
+The `backend/models/yolov3-tiny.weights` file (34MB) is needed. Download it:
    1. Go to: https://pjreddie.com/media/files/yolov3-tiny.weights
    2. Save to: `backend/models/yolov3-tiny.weights`
 
 ---
 
-## Database (Optional — for Online Deployment)
+## Database (Optional)
 
-The app stores projects **locally in your browser** (IndexedDB) — no database needed.
+The app stores projects locally in your browser (IndexedDB). No database needed.
 
-If you want server-side storage with MySQL (for future online deployment), install XAMPP and import `backend/schema.sql`:
+If you want server-side storage with MySQL, install XAMPP and import `backend/schema.sql`:
 
 ```cmd
 C:\xampp\mysql\bin\mysql.exe -u root < backend/schema.sql
@@ -174,23 +174,23 @@ C:\xampp\mysql\bin\mysql.exe -u root < backend/schema.sql
 
 ```
 Photon Project (PCD)/
-├── backend/                 ← Flask server (Python)
-│   ├── app.py               ← Entry point
-│   ├── config.py            ← Config
-│   ├── schema.sql           ← Database schema (optional)
-│   ├── requirements.txt     ← Python packages
-│   ├── models/              ← YOLOv3-tiny AI model
-│   ├── routes/              ← API endpoints
-│   └── services/            ← DB connection
-├── src/                     ← Frontend (JavaScript)
-│   ├── main.js              ← Entry point
-│   ├── components/          ← UI components
-│   ├── services/            ← Image processing + API
-│   ├── styles/              ← CSS
-│   └── utils/               ← State, router, shortcuts
-├── index.html               ← HTML shell
-├── package.json             ← Node dependencies
-└── vite.config.js           ← Vite config
+  backend/                   Flask server (Python)
+    app.py                   Entry point
+    config.py                Config
+    schema.sql               Database schema (optional)
+    requirements.txt         Python packages
+    models/                  YOLOv3-tiny AI model
+    routes/                  API endpoints
+    services/                DB connection
+  src/                       Frontend (JavaScript)
+    main.js                  Entry point
+    components/              UI components
+    services/                Image processing + API
+    styles/                  CSS
+    utils/                   State, router, shortcuts
+  index.html                 HTML shell
+  package.json               Node dependencies
+  vite.config.js             Vite config
 ```
 
 ---

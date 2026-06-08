@@ -1,5 +1,4 @@
-"""PHOTON — Filter / Restoration Routes (C6)
-Gaussian blur, median filter, noise addition (demo), salt & pepper removal."""
+"""PHOTON — Filter Routes"""
 
 from flask import Blueprint, request, jsonify
 import cv2

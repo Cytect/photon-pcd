@@ -1,6 +1,4 @@
-/* PHOTON — Color Service (C5)
- * Grayscale, channel split, HSL adjustment.
- * JS-first for instant results, Python backend as primary. */
+/* PHOTON — Color Service */
 
 import { getLoadedImage, setLoadedImage, getCanvas } from './ImageEngine.js';
 import { getState, setState } from '../utils/state.js';

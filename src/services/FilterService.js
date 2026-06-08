@@ -1,7 +1,4 @@
-/* PHOTON — Filter / Restoration Service (C6)
- * Gaussian blur, median, bilateral, noise demo.
- * Architecture: JS-first for instant results, Python backend as primary.
- * Every function: JS implementation → try Python → use JS result as fallback. */
+/* PHOTON — Filter Service */
 
 import { getLoadedImage, setLoadedImage, getCanvas } from './ImageEngine.js';
 import { getState, setState } from '../utils/state.js';

@@ -1,5 +1,4 @@
-"""PHOTON — Color Processing Routes (C5)
-Grayscale, channel splitting, HSL adjustment via OpenCV color spaces."""
+"""PHOTON — Color Routes"""
 
 from flask import Blueprint, request, jsonify
 import cv2

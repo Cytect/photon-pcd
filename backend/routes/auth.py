@@ -1,5 +1,4 @@
-"""PHOTON — Auth Routes (C12)
-Register, login, and session management via SHA-256 + Flask session."""
+"""PHOTON — Auth Routes"""
 
 from flask import Blueprint, request, jsonify, session
 import hashlib

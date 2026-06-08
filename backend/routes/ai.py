@@ -1,6 +1,4 @@
-"""PHOTON — AI / CNN Object Recognition Routes (C11)
-YOLOv4-tiny via OpenCV DNN for object detection.
-Trained on COCO dataset (80 classes)."""
+"""PHOTON — AI Routes"""
 
 from flask import Blueprint, request, jsonify
 import cv2

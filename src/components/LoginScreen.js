@@ -1,4 +1,4 @@
-/* PHOTON — Login / Register Screen (C12) */
+/* PHOTON — Login Screen */
 import { login, register } from '../utils/auth.js';
 
 export function initLoginScreen(container) {
@@ -28,7 +28,7 @@ export function initLoginScreen(container) {
           </div>
           <div style="text-align:center;margin-top:12px">
             <button id="auth-skip" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:12px">
-              Continue as Guest →
+              Continue as Guest
             </button>
           </div>
         </div>

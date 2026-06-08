@@ -1,4 +1,4 @@
-/* PHOTON — New Project Modal (A1–A5) */
+/* PHOTON — New Project Modal */
 import { x, link, unlink } from '../icons/icons.js';
 import { setState } from '../utils/state.js';
 import { navigate } from '../utils/router.js';

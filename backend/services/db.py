@@ -1,4 +1,4 @@
-"""PHOTON — MySQL Database Connection Service"""
+"""PHOTON — DB Service"""
 
 import pymysql
 from flask import current_app, g

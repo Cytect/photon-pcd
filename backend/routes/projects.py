@@ -1,5 +1,4 @@
-"""PHOTON — Project CRUD Routes (C12)
-Create, list, get, update, delete projects in MySQL."""
+"""PHOTON — Project Routes"""
 
 from flask import Blueprint, request, jsonify, session
 import base64

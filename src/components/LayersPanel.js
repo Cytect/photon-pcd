@@ -1,6 +1,4 @@
-/* PHOTON — Layers / History Panel
- * Displays real undo history from HistoryStack.
- * Click an entry to undo back to that point. */
+/* PHOTON — Layers Panel */
 import { image } from '../icons/icons.js';
 import { subscribe } from '../utils/state.js';
 import { getHistoryLabels, getUndoCount, undo } from '../services/HistoryStack.js';

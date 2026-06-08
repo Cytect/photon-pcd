@@ -1,6 +1,4 @@
-/* PHOTON — Segmentation Service (C8)
- * Threshold-based, edge-based, and K-Means clustering segmentation.
- * JS-first for instant results, Python backend as primary. */
+/* PHOTON — Segment Service */
 
 import { getLoadedImage, setLoadedImage } from './ImageEngine.js';
 import { getState, setState } from '../utils/state.js';

@@ -1,6 +1,4 @@
-/* PHOTON — Enhancement Service (C4) — Client-Side
- * Brightness, contrast, histogram EQ, sharpen, blur.
- * Operates on loadedImageElement, NOT the canvas background. */
+/* PHOTON — Enhance Service */
 
 import { getLoadedImage, setLoadedImage, getCanvas } from './ImageEngine.js';
 import { getState, setState } from '../utils/state.js';

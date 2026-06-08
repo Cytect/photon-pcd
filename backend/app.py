@@ -1,4 +1,4 @@
-"""PHOTON — Flask Application Entry Point"""
+"""PHOTON — App"""
 
 import os
 from flask import Flask

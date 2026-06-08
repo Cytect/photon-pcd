@@ -1,4 +1,4 @@
-"""PHOTON — Backend Configuration"""
+"""PHOTON — Config"""
 
 import os
 

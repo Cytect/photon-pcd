@@ -1,7 +1,4 @@
-/* PHOTON — History Stack Service (Undo/Redo)
- * Full-fidelity snapshot: stores BOTH mainCanvas ImageData AND loadedImageElement.
- * Every processing operation must call pushState() BEFORE applying.
- * BOE-0D: Undo/redo must restore loadedImageElement to prevent stale pixel data. */
+/* PHOTON — History Stack */
 
 import { getImageData, putImageData, getOriginalImageData, onImageLoad, getLoadedImage, setLoadedImage } from './ImageEngine.js';
 import { setState, getState } from '../utils/state.js';

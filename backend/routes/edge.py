@@ -1,5 +1,4 @@
-"""PHOTON — Edge Detection & Binary Processing Routes (C7)
-Canny, Sobel, Prewitt, Robert, Laplacian, LoG, thresholding, morphology."""
+"""PHOTON — Edge Routes"""
 
 from flask import Blueprint, request, jsonify
 import cv2

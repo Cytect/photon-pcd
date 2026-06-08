@@ -1,4 +1,4 @@
-/* PHOTON — Export Modal (B1–B7) */
+/* PHOTON — Export Modal */
 import { x } from '../icons/icons.js';
 import { getState, setState } from '../utils/state.js';
 import { getCanvasBase64, saveImage, getCurrentFileName } from '../services/ImageEngine.js';

@@ -1,6 +1,4 @@
-/* PHOTON — ImageEngine Service
- * Central service for all canvas/image operations.
- * Every processing cluster (C3–C8) calls through this module. */
+/* PHOTON — Image Engine */
 
 
 import { setState, getState } from '../utils/state.js';

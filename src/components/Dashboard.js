@@ -1,4 +1,4 @@
-/* PHOTON — Dashboard View Component (Local IndexedDB) */
+/* PHOTON — Dashboard */
 import { initDashboardBar } from './DashboardBar.js';
 import { renderProjectCard, renderNewProjectCard, wireProjectCards } from './ProjectCard.js';
 import { listAllProjects, deleteProject, getProject } from '../services/LocalProjectStore.js';

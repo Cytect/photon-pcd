@@ -1,5 +1,4 @@
-"""PHOTON — Enhancement Routes (C4)
-Brightness, contrast, histogram equalization, sharpen, smooth/blur."""
+"""PHOTON — Enhance Routes"""
 
 from flask import Blueprint, request, jsonify
 import cv2

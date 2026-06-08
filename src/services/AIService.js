@@ -1,6 +1,4 @@
-/* PHOTON — AI / CNN Service (C11 — Informational Only)
- * Sends the LOADED IMAGE (not the project canvas) to backend.
- * No image mutation. Completely independent from undo/redo. */
+/* PHOTON — AI Service */
 
 import { getCanvasBase64 } from './ImageEngine.js';
 import { getLoadedImage } from './ImageEngine.js';

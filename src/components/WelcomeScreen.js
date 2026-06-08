@@ -1,4 +1,4 @@
-/* PHOTON — Welcome Screen Component (Minimal — canvas drop prompt only) */
+/* PHOTON — Welcome Screen */
 import { image } from '../icons/icons.js';
 import { subscribe } from '../utils/state.js';
 import { openFileDialog } from '../services/ImageEngine.js';

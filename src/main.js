@@ -1,4 +1,4 @@
-/* PHOTON — Main Entry Point */
+/* PHOTON — Main */
 
 // ── Styles (order matters) ─────────────────────────────────
 import './styles/index.css';
@@ -273,4 +273,4 @@ window.addEventListener('photon-save-project', () => {
 subscribe('currentView', switchView);
 initRouter();
 
-console.log('%c⚡ Photon loaded', 'color:#4C8BF5;font-weight:bold;font-size:14px');
+console.log('%cPhoton loaded', 'color:#4C8BF5;font-weight:bold;font-size:14px');

@@ -1,5 +1,4 @@
-/* PHOTON — Auth Utility (C12)
- * Session-based auth via Flask cookies. */
+/* PHOTON — Auth Utility */
 
 import { API_BASE } from './api.js';
 

@@ -1,7 +1,4 @@
-/* PHOTON — Transform Service (C3)
- * Frontend bridge for all geometric operations.
- * JS-first for instant preview, Python backend for academic compliance.
- * Every call pushes undo state. */
+/* PHOTON — Transform Service */
 
 import { apiPost } from '../utils/api.js';
 import { getCanvasBase64, drawBase64, jsFlipH, jsFlipV, jsRotate90CW, jsRotate90CCW, jsRotate180, jsRotateFree } from './ImageEngine.js';

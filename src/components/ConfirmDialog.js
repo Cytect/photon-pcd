@@ -1,4 +1,4 @@
-/* PHOTON — Confirm Dialog (custom UI replacement for browser confirm()) */
+/* PHOTON — Confirm Dialog */
 
 /**
  * Show a styled confirmation dialog.
