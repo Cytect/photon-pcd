@@ -1,8 +1,7 @@
 /* PHOTON — Histogram Panel */
 
 import { subscribe, getState } from '../utils/state.js';
-import { apiPost } from '../utils/api.js';
-import { getCanvasBase64, getLoadedImage, onImageLoad } from '../services/ImageEngine.js';
+import { getLoadedImage, onImageLoad } from '../services/ImageEngine.js';
 
 let activeChannels = ['r', 'g', 'b'];
 let histImg = null;
@@ -225,34 +224,10 @@ function _drawHistogramJS(histData) {
 
 // ── Refresh: JS-first, Python fallback ──────────────────────
 async function refreshHistogram() {
-  // 1. Compute and draw JS histogram (instant)
   const jsData = _computeHistogramJS();
   if (jsData) {
     _drawHistogramJS(jsData);
     _updateStats(jsData.stats);
-  }
-
-  // 2. Try Python matplotlib render (async, better looking)
-  try {
-    const b64 = getCanvasBase64();
-    if (!b64) return;
-
-    const renderResult = await apiPost('/histogram/render', {
-      image_b64: b64,
-      channels: activeChannels.length > 0 ? activeChannels : ['r', 'g', 'b'],
-    });
-
-    if (renderResult?.histogram_png) {
-      histImg.src = renderResult.histogram_png;
-      histImg.style.display = 'block';
-      if (histCanvas) histCanvas.style.display = 'none';
-    }
-
-    // Python stats (more precise)
-    const statsResult = await apiPost('/histogram/compute', { image_b64: b64 });
-    if (statsResult?.stats) _updateStats(statsResult.stats);
-  } catch {
-    // Python offline — JS result stands
   }
 }
 
