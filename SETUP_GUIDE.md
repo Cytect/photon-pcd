@@ -1,18 +1,18 @@
 # 🚀 Photon — Setup Guide
 
-> Image Processing Suite built with Vite + Flask + MySQL
+> Image Processing Suite built with Vite + Flask + OpenCV
 
 ## ⚡ Quick Start (Copy & Paste)
 
-After installing prerequisites and importing the database:
-
-```
-:: Terminal 1 — Backend
+**Terminal 1 — Backend:**
+```cmd
 cd backend
 pip install -r requirements.txt
 python app.py
+```
 
-:: Terminal 2 — Frontend (new window)
+**Terminal 2 — Frontend (new window):**
+```cmd
 npm install
 npm run dev
 ```
@@ -29,8 +29,6 @@ Install these before starting:
 |----------|---------|----------|
 | **Node.js** | 18+ | https://nodejs.org |
 | **Python** | 3.10+ | https://www.python.org/downloads |
-| **XAMPP** | Latest | https://www.apachefriends.org |
-| **Git** | (optional) | https://git-scm.com |
 
 > ⚠️ During Python install, **check "Add Python to PATH"**.
 
@@ -46,35 +44,7 @@ D:\Photon Project (PCD)\
 
 ---
 
-## Step 2 — Start MySQL (XAMPP)
-
-1. Open **XAMPP Control Panel**
-2. Click **Start** next to **MySQL**
-3. Wait until it says "Running" (green)
-
----
-
-## Step 3 — Create the Database
-
-### Option A: via phpMyAdmin (easiest)
-1. Open browser → go to `http://localhost/phpmyadmin`
-2. Click **Import** tab at the top
-3. Click **Choose File** → navigate to `backend/schema.sql`
-4. Click **Go**
-
-### Option B: via Command Line
-Open **Command Prompt** (cmd) and run:
-
-```cmd
-cd "D:\Photon Project (PCD)\backend"
-C:\xampp\mysql\bin\mysql.exe -u root < schema.sql
-```
-
-You should now see `photon_db` in phpMyAdmin with 2 tables: `users` and `projects`.
-
----
-
-## Step 4 — Install Python Dependencies
+## Step 2 — Install Python Dependencies
 
 Open **Command Prompt** and run:
 
@@ -89,7 +59,7 @@ This installs: Flask, OpenCV, NumPy, Matplotlib, PyMySQL, Pillow.
 
 ---
 
-## Step 5 — Start the Backend Server
+## Step 3 — Start the Backend Server
 
 In the same terminal:
 
@@ -109,7 +79,7 @@ You should see:
 
 ---
 
-## Step 6 — Install Frontend Dependencies
+## Step 4 — Install Frontend Dependencies
 
 Open a **NEW** Command Prompt window and run:
 
@@ -122,7 +92,7 @@ npm install
 
 ---
 
-## Step 7 — Start the Frontend Server
+## Step 5 — Start the Frontend Server
 
 In the same terminal:
 
@@ -140,7 +110,7 @@ You should see:
 
 ---
 
-## Step 8 — Open the App
+## Step 6 — Open the App
 
 Open your browser and go to:
 
@@ -153,8 +123,6 @@ You should see the Photon dashboard!
 ## Quick Start Checklist
 
 ```
-✅ XAMPP MySQL running
-✅ Database imported (photon_db)
 ✅ Terminal 1: python app.py     → port 5000
 ✅ Terminal 2: npm run dev       → port 3000
 ✅ Browser: http://localhost:3000
@@ -180,12 +148,6 @@ You should see the Photon dashboard!
 ### "npm is not recognized"
 → Reinstall Node.js and restart your terminal.
 
-### Backend error: "Can't connect to MySQL"
-→ Make sure XAMPP MySQL is running (green in XAMPP Control Panel).
-
-### Backend error: "Unknown database photon_db"
-→ You forgot Step 3. Import `schema.sql` first.
-
 ### CORS error in browser console
 → Make sure the backend is running on port 5000 and frontend on port 3000.
 
@@ -196,14 +158,26 @@ You should see the Photon dashboard!
 
 ---
 
+## Database (Optional — for Online Deployment)
+
+The app stores projects **locally in your browser** (IndexedDB) — no database needed.
+
+If you want server-side storage with MySQL (for future online deployment), install XAMPP and import `backend/schema.sql`:
+
+```cmd
+C:\xampp\mysql\bin\mysql.exe -u root < backend/schema.sql
+```
+
+---
+
 ## Folder Structure
 
 ```
 Photon Project (PCD)/
 ├── backend/                 ← Flask server (Python)
 │   ├── app.py               ← Entry point
-│   ├── config.py            ← MySQL config
-│   ├── schema.sql           ← Database schema
+│   ├── config.py            ← Config
+│   ├── schema.sql           ← Database schema (optional)
 │   ├── requirements.txt     ← Python packages
 │   ├── models/              ← YOLOv3-tiny AI model
 │   ├── routes/              ← API endpoints
@@ -211,9 +185,9 @@ Photon Project (PCD)/
 ├── src/                     ← Frontend (JavaScript)
 │   ├── main.js              ← Entry point
 │   ├── components/          ← UI components
-│   ├── services/            ← API wrappers
+│   ├── services/            ← Image processing + API
 │   ├── styles/              ← CSS
-│   └── utils/               ← State, auth, router
+│   └── utils/               ← State, router, shortcuts
 ├── index.html               ← HTML shell
 ├── package.json             ← Node dependencies
 └── vite.config.js           ← Vite config
@@ -227,7 +201,7 @@ Photon Project (PCD)/
 |-------|-----------|
 | Frontend | Vite + Vanilla JS + CSS |
 | Backend | Flask (Python) |
-| Database | MySQL (XAMPP) |
+| Storage | IndexedDB (browser-local) |
 | Image Processing | OpenCV + NumPy |
 | Histogram | Matplotlib |
 | AI/CNN | YOLOv3-tiny (OpenCV DNN) |
